@@ -18,8 +18,8 @@ class WelcomeController extends Controller
 	public function show($id)
 	{	
 		
-		$todolists = Todolist::all();
-		return view('hola.show', compact('todolists'));
+		$todolist = Todolist::find($id);
+		return view('hola.show', compact('todolist'));
 
 	}
 
